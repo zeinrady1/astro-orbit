@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Linkedin, Download, Send } from "lucide-react";
+import { Mail, Linkedin, Download, Send, Github } from "lucide-react";
 
 const Starfield = () => {
   const [stars, setStars] = useState<{ id: number; x: number; y: number; size: number; duration: number }[]>([]);
@@ -496,31 +496,37 @@ export default function Home() {
                   title: "Treasurer",
                   org: "Vertical Flight Society @ UCSD",
                   date: "Oct 2025 – Jun 2026",
-                  desc: "Maintained financial documentation, forecasts, and budget reports for engineering operations. Tracked expenditures, analyzed cost trends, and prepared summaries for leadership. Coordinated vendor orders and deliveries following UCSD financial procedures."
+                  desc: "Manage financial documentation, forecasts, and budget reports for VFS engineering operations at UCSD. Coordinate procurement, vendor communication, and UCSD-compliant reimbursements for club materials and components. Partner with project leads to strategically allocate funding across active engineering initiatives and mission milestones."
                 },
                 {
-                  title: "Behavior Technician",
+                  title: "Behavioral Health Technician",
                   org: "Nyansa Learning Corporation",
                   date: "Jun 2025 – Sep 2025",
-                  desc: "Followed structured procedures and maintained detailed electronic records. Communicated across teams to ensure consistent program delivery. Adapted problem-solving strategies based on observed outcomes."
+                  desc: "Delivered structured ABA-based intervention sessions for children with developmental differences, facilitating growth in communication, language development, and academic skills. Collected and analyzed behavioral data in real time to adapt intervention strategies. Collaborated with therapists, supervisors, and families to ensure consistent, individualized program delivery across home, school, and community settings."
                 },
                 {
                   title: "Lead Structural Designer",
-                  org: "Freelance",
+                  org: "Freelance Engineering Project",
                   date: "Jun 2025 – Aug 2025",
-                  desc: "Designed load-bearing structures in SolidWorks, performed FEA, created engineering documentation, and collaborated with contractors in real-world build environments."
+                  desc: "Engineered 6 modular freestanding structures in SolidWorks — each rated to 5,000 lbs live load with a minimum factor of safety of 4.5 (30,000 lbs combined capacity). Designed a relocatable treehouse-style viewing platform and a 6-ft elevated deck with integrated bar area. Performed FEA simulations (stress, strain, displacement) to validate structural integrity, and collaborated on-site with contractors and architects to align technical specs with build requirements."
                 },
                 {
-                  title: "Tutor",
+                  title: "Student Tutor",
                   org: "Berktree Learning Center",
                   date: "Jun 2024 – Sep 2024",
-                  desc: "Tutored students in Calculus, Algebra, Geometry, English, ACT, and SAT. Developed tailored lesson plans and improved student performance through personalized instruction."
+                  desc: "Provided personalized academic support in Calculus, Algebra, Geometry, English, ACT, and SAT prep. Developed tailored lesson plans using adaptive teaching methods to foster confidence and problem-solving skills. Helped students improve understanding of complex concepts and achieve measurable academic progress."
                 },
                 {
-                  title: "Social Media Head",
+                  title: "Social Media Coordinator & Design Assistant",
                   org: "Youngfield USA",
                   date: "Feb 2023 – Jun 2024",
-                  desc: "Led social media strategy across Instagram, Facebook, and TikTok. Coordinated product launches, influencer partnerships, and creative campaigns."
+                  desc: "Developed and executed targeted campaigns across Instagram, Facebook, and TikTok, driving engagement and expanding brand presence. Used analytics to refine content strategy aligned with brand values. Collaborated with the creative team as Clothing Design Assistant, contributing input on new collections, materials, and aesthetics."
+                },
+                {
+                  title: "Courtesy Clerk",
+                  org: "Ralphs Grocery Company",
+                  date: "Jun 2020 – Nov 2022",
+                  desc: "Delivered efficient customer service while managing grocery bagging, cart retrieval, and assistance with large items. Supported daily store operations through product restocking, delivery coordination, and maintaining a clean, organized workspace."
                 }
               ].map((exp, idx) => (
                 <div key={idx} className="relative pl-8 md:pl-12" data-testid={`timeline-experience-${idx}`}>
@@ -586,7 +592,7 @@ export default function Home() {
               <p className="text-lg text-muted-foreground">Open to internship and research opportunities in aerospace, GNC, and astrodynamics.</p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            <div className="grid sm:grid-cols-3 gap-4 mb-8">
               <a href="mailto:radyzein2003@gmail.com" className="flex items-center justify-center gap-3 bg-card/70 backdrop-blur-md border border-border p-4 rounded-xl hover:border-primary transition-colors text-white hover:text-primary" data-testid="link-email">
                 <Mail className="w-5 h-5" />
                 <span className="text-sm">radyzein2003@gmail.com</span>
@@ -594,6 +600,10 @@ export default function Home() {
               <a href="https://linkedin.com/in/zein-rady-a3475227b" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-card/70 backdrop-blur-md border border-border p-4 rounded-xl hover:border-primary transition-colors text-white hover:text-primary" data-testid="link-linkedin">
                 <Linkedin className="w-5 h-5" />
                 <span>LinkedIn Profile</span>
+              </a>
+              <a href="https://github.com/zeinrady1" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 bg-card/70 backdrop-blur-md border border-border p-4 rounded-xl hover:border-primary transition-colors text-white hover:text-primary" data-testid="link-github">
+                <Github className="w-5 h-5" />
+                <span>GitHub Profile</span>
               </a>
             </div>
 
