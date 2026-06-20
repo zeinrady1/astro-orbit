@@ -528,13 +528,15 @@ export default function Home() {
               ].map((exp, idx) => (
                 <div key={idx} className="relative pl-8 md:pl-12" data-testid={`timeline-experience-${idx}`}>
                   <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-background border-2 border-primary shadow-[0_0_12px_rgba(245,158,11,1)]" />
-                  <h3 className="text-xl font-bold text-white">{exp.title}</h3>
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 mb-2">
-                    <span className="text-primary font-medium">{exp.org}</span>
-                    <span className="hidden sm:inline text-muted-foreground">•</span>
-                    <span className="text-sm text-muted-foreground">{exp.date}</span>
+                  <div className="bg-card/80 backdrop-blur-md border border-border/60 rounded-xl p-4 md:bg-transparent md:backdrop-blur-none md:border-0 md:rounded-none md:p-0">
+                    <h3 className="text-xl font-bold text-white">{exp.title}</h3>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 mb-2">
+                      <span className="text-primary font-medium">{exp.org}</span>
+                      <span className="hidden sm:inline text-muted-foreground">•</span>
+                      <span className="text-sm text-muted-foreground">{exp.date}</span>
+                    </div>
+                    <p className="text-muted-foreground">{exp.desc}</p>
                   </div>
-                  <p className="text-muted-foreground">{exp.desc}</p>
                 </div>
               ))}
             </div>
