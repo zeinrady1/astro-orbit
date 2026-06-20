@@ -389,7 +389,7 @@ export default function Home() {
             >
               <h2 className="text-2xl font-bold text-white mb-4">About Me</h2>
               <p className="text-muted-foreground leading-relaxed">
-                I'm a junior at UC San Diego studying Aerospace Engineering with a specialization in Astrodynamics and Space Applications (GPA 3.70). My focus is on spacecraft guidance, navigation, and control, working toward a career in astrodynamics at organizations like NASA or SpaceX. I bring hands-on experience in CAD modeling, FEA simulation, embedded systems, and orbital mechanics research, alongside leadership roles in student engineering organizations.
+                I'm a junior at UC San Diego studying Aerospace Engineering with a specialization in Astrodynamics and Space Applications (GPA 3.65). My focus is on spacecraft guidance, navigation, and control, working toward a career in astrodynamics at organizations like NASA or SpaceX. I bring hands-on experience in CAD modeling, FEA simulation, embedded systems, and orbital mechanics research, alongside leadership roles in student engineering organizations.
               </p>
             </motion.div>
 
@@ -439,7 +439,7 @@ export default function Home() {
                 {
                   title: "University of California, San Diego",
                   degree: "B.S. Aerospace Engineering, Specialization in Astrodynamics and Space Applications",
-                  gpa: "3.70",
+                  gpa: "3.65",
                   date: "Sep 2024 – Jun 2027",
                   details: "Relevant Coursework: Orbital Mechanics, Spacecraft Guidance & Navigation, Flight Simulation Techniques, Advanced Fluid Mechanics, Signals & Systems, Linear Control, Thermodynamics, Probability & Statistics for Engineers"
                 },
