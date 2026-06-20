@@ -346,87 +346,82 @@ export default function Home() {
         {/* Hero */}
         <section className="relative min-h-screen flex items-center pt-16 z-10">
           <div className="container relative px-4 mx-auto">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
 
-              {/* Left column */}
-              <div>
-                <motion.h1
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.9 }}
-                  className="text-5xl md:text-7xl font-bold text-white mb-3 drop-shadow-[0_0_20px_rgba(245,158,11,0.3)] tracking-tight"
-                >
-                  Zein Rady
-                </motion.h1>
-                <motion.p
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.9, delay: 0.15 }}
-                  className="text-xl md:text-2xl font-semibold text-primary mb-1"
-                >
-                  University of California, San Diego
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.9, delay: 0.25 }}
-                  className="text-lg text-muted-foreground mb-8"
-                >
-                  Aerospace Engineering · Astrodynamics and Space Applications
-                </motion.p>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 24 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.9, delay: 0.4 }}
-                  className="grid grid-cols-2 gap-3"
-                >
-                  <a href="/resume.html" target="_blank" rel="noreferrer" className="flex items-center gap-3 bg-card/70 backdrop-blur-md border border-border p-4 rounded-xl hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] group">
-                    <FileText className="w-5 h-5 text-primary shrink-0" />
-                    <div>
-                      <p className="text-xs text-muted-foreground">Resume</p>
-                      <p className="text-sm font-semibold text-white group-hover:text-primary transition-colors">View Resume</p>
-                    </div>
-                  </a>
-                  <a href="mailto:radyzein2003@gmail.com" className="flex items-center gap-2 sm:gap-3 bg-card/70 backdrop-blur-md border border-border p-3 sm:p-4 rounded-xl hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] group min-w-0 overflow-hidden">
-                    <Mail className="w-5 h-5 text-primary shrink-0" />
-                    <div className="min-w-0 overflow-hidden">
-                      <p className="text-xs text-muted-foreground">Email</p>
-                      <p className="text-xs sm:text-sm font-semibold text-white group-hover:text-primary transition-colors truncate">radyzein2003@gmail.com</p>
-                    </div>
-                  </a>
-                  <a href="tel:9495016098" className="flex items-center gap-3 bg-card/70 backdrop-blur-md border border-border p-4 rounded-xl hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] group">
-                    <Phone className="w-5 h-5 text-primary shrink-0" />
-                    <div>
-                      <p className="text-xs text-muted-foreground">Phone</p>
-                      <p className="text-sm font-semibold text-white group-hover:text-primary transition-colors">(949) 501-6098</p>
-                    </div>
-                  </a>
-                  <a href="https://linkedin.com/in/zein-rady-a3475227b" target="_blank" rel="noreferrer" className="flex items-center gap-3 bg-card/70 backdrop-blur-md border border-border p-4 rounded-xl hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] group">
-                    <Linkedin className="w-5 h-5 text-primary shrink-0" />
-                    <div>
-                      <p className="text-xs text-muted-foreground">LinkedIn</p>
-                      <p className="text-sm font-semibold text-white group-hover:text-primary transition-colors">LinkedIn Profile</p>
-                    </div>
-                  </a>
-                </motion.div>
-              </div>
-
-              {/* Right column — About Me card */}
+            {/* Row 1: Name (left) + Photo (right) */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mb-8">
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.9, delay: 0.5 }}
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9 }}
+                className="flex-1 text-center sm:text-left"
               >
-                <div className="bg-card/70 backdrop-blur-md border border-border p-8 rounded-2xl hover:border-primary/50 transition-colors duration-500">
-                  <h2 className="text-2xl font-bold text-white mb-4">About Me</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    I'm a junior at UC San Diego studying Aerospace Engineering with a specialization in Astrodynamics and Space Applications (GPA 3.70). My focus is on spacecraft guidance, navigation, and control, working toward a career in astrodynamics at organizations like NASA or SpaceX. I bring hands-on experience in CAD modeling, FEA simulation, embedded systems, and orbital mechanics research, alongside leadership roles in student engineering organizations.
-                  </p>
-                </div>
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-3 drop-shadow-[0_0_20px_rgba(245,158,11,0.3)] tracking-tight">
+                  Zein Rady
+                </h1>
+                <p className="text-xl md:text-2xl font-semibold text-primary mb-1">
+                  University of California, San Diego
+                </p>
+                <p className="text-lg text-muted-foreground">
+                  Aerospace Engineering · Astrodynamics and Space Applications
+                </p>
               </motion.div>
 
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.9, delay: 0.2 }}
+                className="shrink-0"
+              >
+                <img
+                  src="/profile.jpg"
+                  alt="Zein Rady"
+                  className="w-44 h-44 md:w-56 md:h-56 rounded-full object-cover object-top border-4 border-primary shadow-[0_0_30px_rgba(245,158,11,0.4)]"
+                />
+              </motion.div>
             </div>
+
+            {/* Row 2: About Me */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.35 }}
+              className="bg-card/70 backdrop-blur-md border border-border p-8 rounded-2xl hover:border-primary/50 transition-colors duration-500 mb-8"
+            >
+              <h2 className="text-2xl font-bold text-white mb-4">About Me</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                I'm a junior at UC San Diego studying Aerospace Engineering with a specialization in Astrodynamics and Space Applications (GPA 3.70). My focus is on spacecraft guidance, navigation, and control, working toward a career in astrodynamics at organizations like NASA or SpaceX. I bring hands-on experience in CAD modeling, FEA simulation, embedded systems, and orbital mechanics research, alongside leadership roles in student engineering organizations.
+              </p>
+            </motion.div>
+
+            {/* Row 3: Links in a single horizontal row */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.5 }}
+              className="flex flex-wrap gap-3 justify-center sm:justify-start"
+            >
+              <a href="/resume.html" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-card/70 backdrop-blur-md border border-border px-5 py-3 rounded-xl hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] group">
+                <FileText className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-white group-hover:text-primary transition-colors">Resume</span>
+              </a>
+              <a href="mailto:radyzein2003@gmail.com" className="flex items-center gap-2 bg-card/70 backdrop-blur-md border border-border px-5 py-3 rounded-xl hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] group">
+                <Mail className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-white group-hover:text-primary transition-colors">Email</span>
+              </a>
+              <a href="tel:9495016098" className="flex items-center gap-2 bg-card/70 backdrop-blur-md border border-border px-5 py-3 rounded-xl hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] group">
+                <Phone className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-white group-hover:text-primary transition-colors">Phone</span>
+              </a>
+              <a href="https://linkedin.com/in/zein-rady-a3475227b" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-card/70 backdrop-blur-md border border-border px-5 py-3 rounded-xl hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] group">
+                <Linkedin className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-white group-hover:text-primary transition-colors">LinkedIn</span>
+              </a>
+              <a href="https://github.com/zeinrady1" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-card/70 backdrop-blur-md border border-border px-5 py-3 rounded-xl hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(245,158,11,0.2)] group">
+                <Github className="w-4 h-4 text-primary" />
+                <span className="text-sm font-semibold text-white group-hover:text-primary transition-colors">GitHub</span>
+              </a>
+            </motion.div>
+
           </div>
         </section>
 
