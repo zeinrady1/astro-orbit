@@ -712,7 +712,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-white mb-6">Soft Skills</h3>
                 <div className="flex flex-wrap gap-3">
                   {["Leadership", "Problem Solving", "Critical Thinking", "Cross-functional Collaboration", "Analytical Problem-Solving", "Attention to Detail", "Communication", "Adaptability", "Time Management", "Team Coordination", "Teamwork", "Public Speaking", "Creative Collaboration", "Multitasking", "Organization", "Emotional Intelligence"].map((skill) => (
-                    <span key={skill} className="px-4 py-2 bg-secondary/80 text-sm rounded-lg text-white border border-border hover:border-white/40 hover:shadow-[0_0_15px_rgba(255,255,255,0.25)] transition-all cursor-default" data-testid={`tag-softskill-${skill}`}>
+                    <span key={skill} className="px-4 py-2 bg-secondary/80 text-sm rounded-lg text-white border border-border hover:border-primary hover:shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all cursor-default" data-testid={`tag-softskill-${skill}`}>
                       {skill}
                     </span>
                   ))}
